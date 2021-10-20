@@ -1,0 +1,15 @@
+<h2>Edit Task</h2>
+Time: <input [(ngModel)]='editTask.time'>
+<br>
+Task: <input [(ngModel)]='editTask.task'>
+<br>
+<label for="priority">Priority</label>
+<select type="dropdown" name="priority" id="priority" [(ngModel)]='editTask.priority' [ngModelOptions]="{standalone: true}">
+    <option value="Low">Low</option>
+    <option value="Medium">Medium</option>
+    <option value="High">High</option>
+    <option value="Vital">Vital</option>
+    <option value="Late">Late</option>  
+</select>
+<br>
+<button (click)='saveTask()'>Save</button>
